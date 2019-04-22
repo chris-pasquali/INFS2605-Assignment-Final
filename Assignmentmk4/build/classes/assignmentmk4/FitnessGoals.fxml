@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="866.0" prefWidth="947.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.1" fx:controller="assignmentmk4.FitnessGoalsController">
+   <content>
+      <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="881.0" prefWidth="968.0" style="-fx-background-color: #DCDCDC;">
+         <children>
+            <Text fill="SEAGREEN" layoutX="240.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="  Fitness Goals" wrappingWidth="518.296880684793">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="62.0" />
+               </font>
+            </Text>
+            <Button layoutX="793.0" layoutY="64.0" minWidth="53.0" mnemonicParsing="false" onAction="#saveGoals" prefHeight="90.0" prefWidth="102.0" style="-fx-background-color: #2e8b57;" text="Save" textFill="#f9fcfa">
+               <font>
+                  <Font name="Arial Black" size="24.0" />
+               </font>
+            </Button>
+            <Button layoutX="50.0" layoutY="58.0" minWidth="53.0" mnemonicParsing="false" onAction="#returnHome" prefHeight="103.0" prefWidth="117.0" style="-fx-background-color: transparent;" textFill="#f9fcfa">
+               <font>
+                  <Font name="Arial Black" size="24.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="87.0" fitWidth="102.0">
+                     <image>
+                        <Image url="@../../AppData/Local/Temp/icons8_left_arrow_52px_1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <AnchorPane layoutX="49.0" layoutY="213.0" prefHeight="70.0" prefWidth="415.0" style="-fx-background-color: #2e8b57;" />
+            <AnchorPane layoutX="490.0" layoutY="213.0" prefHeight="64.0" prefWidth="406.0" style="-fx-background-color: #2e8b57;" />
+            <AnchorPane layoutX="49.0" layoutY="272.0" prefHeight="215.0" prefWidth="415.0" style="-fx-background-color: white;">
+               <children>
+                  <Text layoutX="71.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Goal for Steps">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="steps" layoutX="61.0" layoutY="158.0" prefHeight="28.0" prefWidth="203.0" />
+                  <ImageView fitHeight="92.0" fitWidth="96.0" layoutX="268.0" layoutY="22.0">
+                     <image>
+                        <Image url="@../../AppData/Local/Temp/icons8_go_60px.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="49.0" layoutY="525.0" prefHeight="303.0" prefWidth="466.0" style="-fx-background-color: white;">
+               <children>
+                  <AnchorPane layoutY="-17.0" prefHeight="66.0" prefWidth="496.0" style="-fx-background-color: #2e8b57;" />
+                  <Text layoutX="76.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Goal for Heart Rate" wrappingWidth="395.07030510902405">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+                  <TextField layoutX="76.0" layoutY="139.0" prefHeight="26.0" prefWidth="235.0" />
+                  <Text layoutX="71.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Goal for number of Sleep per night" wrappingWidth="354.99999809265137">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+                  <TextField layoutX="76.0" layoutY="235.0" prefHeight="30.0" prefWidth="298.0" />
+                  <ImageView fitHeight="80.0" fitWidth="76.0" layoutX="348.0" layoutY="91.0">
+                     <image>
+                        <Image url="@../../AppData/Local/Temp/icons8_hearts_52px.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView layoutX="407.0" layoutY="203.0">
+                     <image>
+                        <Image url="@../../AppData/Local/Temp/icons8_sleep_64px.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="490.0" layoutY="273.0" prefHeight="214.0" prefWidth="406.0" style="-fx-background-color: white;">
+               <children>
+                  <Text layoutX="26.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Goal for Fat Ratio" wrappingWidth="215.0703067779541">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="ratio" layoutX="26.0" layoutY="65.0" prefHeight="30.0" prefWidth="158.0" />
+                  <Text layoutX="26.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Goal for BMI" wrappingWidth="174.29689025878912">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="bmi" layoutX="26.0" layoutY="162.0" prefHeight="26.0" prefWidth="157.0" />
+                  <ImageView fitHeight="67.0" fitWidth="88.0" layoutX="252.0" layoutY="129.0">
+                     <image>
+                        <Image url="@../../AppData/Local/Temp/icons8_submit_for_approval_filled_100px.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="251.0" layoutY="28.0">
+                     <image>
+                        <Image url="@../../AppData/Local/Temp/icons8_chocolate_bar_filled_100px.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="562.0" layoutY="509.0" prefHeight="67.0" prefWidth="337.0" style="-fx-background-color: #2e8b57;" />
+            <AnchorPane layoutX="562.0" layoutY="572.0" prefHeight="256.0" prefWidth="337.0" style="-fx-background-color: white;">
+               <children>
+                  <Text layoutX="43.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Goal for Flights">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="flights" layoutX="43.0" layoutY="185.0" prefHeight="35.0" prefWidth="193.0" />
+                  <ImageView fitHeight="67.0" fitWidth="60.0" layoutX="236.0" layoutY="79.0">
+                     <image>
+                        <Image url="@../../AppData/Local/Temp/icons8_stairs_100px.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </Pane>
+   </content>
+</ScrollPane>
+
+
+<!--<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="563.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="assignmentmk4.FitnessGoalsController">
+   <children>
+      <Text layoutX="83.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Goal for Steps" wrappingWidth="92.2060546875" />
+      <Text layoutX="89.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Goal for Flights" />
+      <Text layoutX="92.0" layoutY="236.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Goal for BMI" />
+      <Text layoutX="88.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Goal for Heart Rate" />
+      <Text layoutX="99.0" layoutY="364.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Goal for Fat Ratio" />
+      <Text layoutX="99.0" layoutY="436.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Goal for number of Sleep per night" />
+      <Button layoutX="504.0" layoutY="499.0" mnemonicParsing="false" onAction="#saveGoals" prefHeight="34.0" prefWidth="76.0" text="Save" />
+      <Button layoutX="14.0" layoutY="30.0" mnemonicParsing="false" onAction="#returnHome" text="Return" />
+      <TextField fx:id="steps" layoutX="287.0" layoutY="95.0" />
+      <TextField fx:id="flights" layoutX="300.0" layoutY="155.0" />
+      <TextField fx:id="bmi" layoutX="300.0" layoutY="218.0" />
+      <TextField layoutX="300.0" layoutY="271.0" />
+      <TextField fx:id="ratio" layoutX="300.0" layoutY="346.0" />
+      <TextField layoutX="337.0" layoutY="418.0" />
+      <Text layoutX="223.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Goals" />
+   </children>
+</AnchorPane>-->

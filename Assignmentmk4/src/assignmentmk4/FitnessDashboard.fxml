@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1721.0" prefWidth="1292.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignmentmk4.FitnessDashboardController">
+   <content>
+      <AnchorPane id="AnchorPane" fx:id="updateFood" prefHeight="1947.0" prefWidth="1281.0" style="-fx-background-color: #2e8b57;">
+         <children>
+            <DatePicker fx:id="datePicker" layoutX="485.0" layoutY="113.0" onAction="#datePicker" prefHeight="26.0" prefWidth="316.0" />
+            <Button layoutX="104.0" layoutY="149.0" mnemonicParsing="false" onAction="#viewGoals" prefHeight="221.0" prefWidth="265.0" style="-fx-background-color: #F0FFF0;">
+               <font>
+                  <Font size="41.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="111.0" fitWidth="118.0">
+                     <image>
+                        <Image url="@../../AppData/Local/Temp/icons8_baby_footprints_path_512px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="updateFood" layoutX="377.0" layoutY="149.0" mnemonicParsing="false" onAction="#updateFoodEntry" prefHeight="221.0" prefWidth="258.0" style="-fx-background-color: #B0C4DE;">
+               <graphic>
+                  <ImageView fitHeight="131.0" fitWidth="143.0">
+                     <image>
+                        <Image url="@../../AppData/Local/Temp/icons8_Food_100px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="646.0" layoutY="149.0" mnemonicParsing="false" onAction="#viewMentalHealthEntry" prefHeight="221.0" prefWidth="265.0" style="-fx-background-color: #FFC0CB;">
+               <graphic>
+                  <ImageView fitHeight="112.0" fitWidth="114.0">
+                     <image>
+                        <Image url="@../../AppData/Local/Temp/icons8_health_book_96px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="updateAerobic" layoutX="917.0" layoutY="149.0" mnemonicParsing="false" onAction="#updateAerobicEntry" prefHeight="221.0" prefWidth="265.0" style="-fx-background-color: #FFA07A;">
+               <graphic>
+                  <ImageView fitHeight="101.0" fitWidth="102.0">
+                     <image>
+                        <Image url="@../../AppData/Local/Temp/icons8_exercise_128px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="104.0" layoutY="379.0" mnemonicParsing="false" onAction="#updateResistanceEntry" prefHeight="221.0" prefWidth="265.0" style="-fx-background-color: #00FFFF;">
+               <graphic>
+                  <ImageView>
+                     <image>
+                        <Image url="@../../AppData/Local/Temp/icons8_dumbbell_128px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="917.0" layoutY="379.0" mnemonicParsing="false" onAction="#updateGymAttendance" prefHeight="221.0" prefWidth="265.0" style="-fx-background-color: #98FB98;">
+               <graphic>
+                  <ImageView fitHeight="158.0" fitWidth="156.0">
+                     <image>
+                        <Image url="@../../AppData/Local/Temp/icons8_attendance_mark_240px_1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Text layoutX="174.0" layoutY="354.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Update Goals" wrappingWidth="168.13669729232788">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="427.0" layoutY="355.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Food Consumption">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Text>
+            <Text layoutX="714.0" layoutY="355.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mental Health" wrappingWidth="156.13669729232788">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Text>
+            <Text layoutX="972.0" layoutY="355.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aerobic Exercise" wrappingWidth="218.13671875">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Text>
+            <Text layoutX="152.0" layoutY="586.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Resistance Exercise" wrappingWidth="168.13670921325684">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="984.0" layoutY="586.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gym Attendance" wrappingWidth="179.63525390625">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Button layoutX="377.0" layoutY="379.0" mnemonicParsing="false" onAction="#viewHealthCheckUp" prefHeight="221.0" prefWidth="534.0" style="-fx-background-color: #FF00FF;">
+               <font>
+                  <Font size="41.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="117.0" fitWidth="118.0">
+                     <image>
+                        <Image url="@../../AppData/Local/Temp/icons8_note_128px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Text layoutX="578.0" layoutY="585.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Professional Notes" wrappingWidth="179.63525390625">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <ProgressBar layoutX="137.0" layoutY="167.0" prefHeight="29.0" prefWidth="200.0" progress="0.39" />
+            <ProgressBar layoutX="420.0" layoutY="167.0" prefHeight="29.0" prefWidth="200.0" progress="0.61" />
+            <ProgressBar layoutX="682.0" layoutY="167.0" prefHeight="29.0" prefWidth="200.0" progress="0.61" />
+            <ProgressBar layoutX="953.0" layoutY="167.0" prefHeight="29.0" prefWidth="200.0" progress="0.61" />
+            <ProgressBar layoutX="953.0" layoutY="392.0" prefHeight="29.0" prefWidth="200.0" progress="0.4" />
+            <ProgressBar layoutX="137.0" layoutY="392.0" prefHeight="29.0" prefWidth="200.0" progress="0.61" />
+            <ProgressBar layoutX="487.0" layoutY="392.0" prefHeight="29.0" prefWidth="338.0" progress="0.26" />
+            <TableView fx:id="mentalThoughtsList" layoutX="107.0" layoutY="726.0" prefHeight="240.0" prefWidth="541.0" style="-fx-background-color: white;">
+               <columns>
+                  <TableColumn fx:id="mentalThoughtsDateColumn" prefWidth="75.0" text="Date" />
+                  <TableColumn fx:id="mentalThoughtsColumn" prefWidth="247.0" text="Thoughts" />
+               </columns>
+            </TableView>
+            <TableView fx:id="fitnessGoalsList" layoutX="668.0" layoutY="726.0" prefHeight="241.0" prefWidth="516.0" style="-fx-background-color: white;">
+               <columns>
+                  <TableColumn fx:id="stepsGoalsColumn" prefWidth="90.0" text="Steps" />
+                  <TableColumn fx:id="flightsGoalsColumn" prefWidth="79.0" text="Flights" />
+                  <TableColumn fx:id="bmiGoalsColumn" prefWidth="79.0" text="BMI" />
+                  <TableColumn fx:id="heartRateGoalsColumn" prefWidth="79.0" text="Heart Rate" />
+                  <TableColumn fx:id="fatRatioGoalsColumn" prefWidth="85.0" text="Fat Ratio" />
+                  <TableColumn fx:id="sleepGoalsColumn" prefWidth="122.0" text="Sleep (hours)" />
+               </columns>
+            </TableView>
+            <TableView fx:id="foodList" layoutX="104.0" layoutY="1074.0" prefHeight="366.0" prefWidth="396.0">
+               <columns>
+                  <TableColumn fx:id="mealTimeColumn" prefWidth="86.0" text="Meal" />
+                  <TableColumn fx:id="foodCategoryColumn" prefWidth="128.0" text="Category" />
+                  <TableColumn fx:id="servingsColumn" prefWidth="69.0" text="Servings" />
+                  <TableColumn fx:id="foodItemColumn" prefWidth="152.0" text="Food Item" />
+                  <TableColumn fx:id="dateColumn" prefWidth="128.0" text="Date" />
+               </columns>
+            </TableView>
+            <TableView fx:id="aerobicExerciseList" layoutX="825.0" layoutY="1074.0" prefHeight="366.0" prefWidth="394.0">
+               <columns>
+                  <TableColumn fx:id="aerobicDateColumn" prefWidth="116.0" text="Date" />
+                  <TableColumn fx:id="aerobicTypeColumn" prefWidth="169.0" text="Type" />
+                  <TableColumn fx:id="aerobicDistanceColumn" minWidth="2.0" prefWidth="111.0" text="Distance (km)" />
+                  <TableColumn fx:id="aerobicTimeColumn" prefWidth="117.0" text="Time (mins)" />
+               </columns>
+            </TableView>
+            <TableView fx:id="resistanceExerciseList1" layoutX="96.0" layoutY="1520.0" prefHeight="277.0" prefWidth="425.0">
+               <columns>
+                  <TableColumn fx:id="resistanceDateColumn1" prefWidth="132.0" text="Date" />
+                  <TableColumn fx:id="resistanceTypeColumn1" prefWidth="165.0" text="Type" />
+                  <TableColumn fx:id="resistanceTimeColumn1" prefWidth="167.0" text="Time (mins)" />
+               </columns>
+            </TableView>
+            <TableView fx:id="gymAttendanceList" layoutX="530.0" layoutY="1520.0" prefHeight="277.0" prefWidth="302.0">
+               <columns>
+                  <TableColumn fx:id="attendanceDateColumn" prefWidth="127.0" text="Date" />
+                  <TableColumn fx:id="attendanceSessionsColumn" prefWidth="122.0" text="Number Sessions" />
+               </columns>
+            </TableView>
+            <TableView fx:id="medicalCheckUpList" layoutX="840.0" layoutY="1520.0" prefHeight="277.0" prefWidth="378.0">
+               <columns>
+                  <TableColumn fx:id="medicalCheckUpDateColumn" prefWidth="92.0" text="Date" />
+                  <TableColumn fx:id="medicalProfessionColumn" prefWidth="101.0" text="Profession" />
+                  <TableColumn fx:id="medicalNotesColumn" prefWidth="281.0" text="Notes" />
+               </columns>
+            </TableView>
+            <TableView fx:id="aerobicExerciseList1" layoutX="512.0" layoutY="1074.0" prefHeight="366.0" prefWidth="303.0">
+               <columns>
+                  <TableColumn fx:id="aerobicDateColumn1" prefWidth="116.0" text="Date" />
+                  <TableColumn fx:id="aerobicTypeColumn1" prefWidth="169.0" text="Type" />
+                  <TableColumn fx:id="aerobicDistanceColumn1" minWidth="2.0" prefWidth="111.0" text="Distance (km)" />
+                  <TableColumn fx:id="aerobicTimeColumn1" prefWidth="117.0" text="Time (mins)" />
+               </columns>
+            </TableView>
+            <AnchorPane layoutX="2.0" prefHeight="110.0" prefWidth="1288.0" style="-fx-background-color: white;">
+               <children>
+                  <Text fill="SEAGREEN" layoutX="360.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="  My Fitness Dashboard" wrappingWidth="541.9830722808838">
+                     <font>
+                        <Font name="Arial Black" size="42.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="108.0" layoutY="672.0" prefHeight="54.0" prefWidth="1077.0" style="-fx-background-color: #9370DB;" />
+            <AnchorPane layoutX="104.0" layoutY="1020.0" prefHeight="54.0" prefWidth="1115.0" style="-fx-background-color: #D8BFD8;" />
+            <AnchorPane layoutX="96.0" layoutY="1466.0" prefHeight="54.0" prefWidth="1123.0" style="-fx-background-color: #9370DB;" />
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>
+
+
+<!--<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" fx:id="updateFood" prefHeight="1186.0" prefWidth="1814.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignmentmk4.FitnessDashboardController">
+   <children>
+      <Label fx:id="stepsTxt" graphicTextGap="3.0" layoutX="25.0" layoutY="126.0" prefHeight="43.0" prefWidth="76.0" text="Steps" />
+      <DatePicker fx:id="datePicker" layoutX="155.0" layoutY="14.0" onAction="#datePicker" />
+      <Label fx:id="stairs" layoutX="71.0" layoutY="67.0" prefHeight="27.0" prefWidth="60.0" text="Stairs" />
+      <Label fx:id="BMI" layoutX="276.0" layoutY="112.0" prefHeight="27.0" prefWidth="60.0" text="BMI" />
+      <Label fx:id="heartRate" layoutX="20.0" layoutY="222.0" prefHeight="27.0" prefWidth="110.0" text="Heart Rate" />
+      <Label fx:id="sleep" layoutX="190.0" layoutY="183.0" prefHeight="27.0" prefWidth="51.0" text="Sleep" />
+      <Label fx:id="fatRatio" layoutX="297.0" layoutY="183.0" prefHeight="27.0" prefWidth="76.0" text="Fat Ratio" />
+      <TableView fx:id="foodList" layoutX="12.0" layoutY="303.0" prefHeight="366.0" prefWidth="564.0">
+        <columns>
+          <TableColumn fx:id="mealTimeColumn" prefWidth="86.0" text="Meal" />
+          <TableColumn fx:id="foodCategoryColumn" prefWidth="128.0" text="Category" />
+            <TableColumn fx:id="servingsColumn" prefWidth="69.0" text="Servings" />
+            <TableColumn fx:id="foodItemColumn" prefWidth="152.0" text="Food Item" />
+            <TableColumn fx:id="dateColumn" prefWidth="128.0" text="Date" />
+        </columns>
+      </TableView>
+      <Button fx:id="updateFood" layoutX="421.0" layoutY="249.0" mnemonicParsing="false" onAction="#updateFoodEntry" prefHeight="37.0" prefWidth="180.0" text="Update Food Consumption" />
+      <Button layoutX="936.0" layoutY="40.0" mnemonicParsing="false" onAction="#viewMentalHealthEntry" text="Mental Health" />
+      <TableView fx:id="aerobicExerciseList" layoutX="787.0" layoutY="281.0" prefHeight="264.0" prefWidth="514.0">
+        <columns>
+          <TableColumn fx:id="aerobicDateColumn" prefWidth="116.0" text="Date" />
+          <TableColumn fx:id="aerobicTypeColumn" prefWidth="169.0" text="Type" />
+            <TableColumn fx:id="aerobicDistanceColumn" minWidth="2.0" prefWidth="111.0" text="Distance (km)" />
+            <TableColumn fx:id="aerobicTimeColumn" prefWidth="117.0" text="Time (mins)" />
+        </columns>
+      </TableView>
+      <Button fx:id="updateAerobic" layoutX="846.0" layoutY="210.0" mnemonicParsing="false" onAction="#updateAerobicEntry" prefHeight="37.0" prefWidth="180.0" text="Update Aerobic Exercise" />
+      <Label fx:id="stepGoals" layoutX="14.0" layoutY="175.0" text="Goals For Steps" />
+      <Label fx:id="stairsGoals" layoutX="57.0" layoutY="93.0" prefHeight="37.0" prefWidth="180.0" text="Goals For Stairs" />
+      <Label fx:id="bmiGoals" layoutX="258.0" layoutY="147.0" prefHeight="18.0" prefWidth="110.0" text="Goals For BMI" />
+      <Label fx:id="heartRateGoal" layoutX="14.0" layoutY="247.0" prefHeight="55.0" prefWidth="169.0" text="Goals For Heart Rate" />
+      <Label fx:id="sleepGoals" layoutX="135.0" layoutY="220.0" prefHeight="18.0" prefWidth="110.0" text="Goals For Sleep" />
+      <Label fx:id="fatRatioGoals" layoutX="294.0" layoutY="220.0" prefHeight="18.0" prefWidth="141.0" text="Goals For Fat Ratio" />
+      <TableView fx:id="fitnessGoalsList" layoutX="108.0" layoutY="724.0" prefHeight="125.0" prefWidth="535.0">
+        <columns>
+          <TableColumn fx:id="stepsGoalsColumn" prefWidth="90.0" text="Steps" />
+          <TableColumn fx:id="flightsGoalsColumn" prefWidth="79.0" text="Flights" />
+            <TableColumn fx:id="bmiGoalsColumn" prefWidth="79.0" text="BMI" />
+            <TableColumn fx:id="heartRateGoalsColumn" prefWidth="79.0" text="Heart Rate" />
+            <TableColumn fx:id="fatRatioGoalsColumn" prefWidth="85.0" text="Fat Ratio" />
+            <TableColumn fx:id="sleepGoalsColumn" prefWidth="122.0" text="Sleep (hours)" />
+        </columns>
+      </TableView>
+      <TableView fx:id="mentalExerciseList" layoutX="1077.0" layoutY="12.0" prefHeight="255.0" prefWidth="324.0">
+         <columns>
+            <TableColumn fx:id="mentalExerciseDateColumn" prefWidth="100.0" text="Date" />
+            <TableColumn fx:id="mentalExerciseColumn" prefWidth="111.0" text="Exercise" />
+            <TableColumn fx:id="mentalExerciseMinutes" prefWidth="111.0" text="Minutes" />
+         </columns>
+      </TableView>
+      <TableView fx:id="mentalThoughtsList" layoutX="522.0" layoutY="23.0" prefHeight="205.0" prefWidth="324.0">
+         <columns>
+            <TableColumn fx:id="mentalThoughtsDateColumn" prefWidth="94.0" text="Date" />
+            <TableColumn fx:id="mentalThoughtsColumn" prefWidth="228.0" text="Thoughts" />
+         </columns>
+      </TableView>
+      <Button layoutX="246.0" layoutY="693.0" mnemonicParsing="false" onAction="#viewGoals" text="Update Goals" />
+      <Button layoutX="956.0" layoutY="693.0" mnemonicParsing="false" onAction="#viewHealthCheckUp" text="Add Check Up" />
+      <TableView fx:id="medicalCheckUpList" layoutX="859.0" layoutY="745.0" prefHeight="248.0" prefWidth="475.0">
+        <columns>
+          <TableColumn fx:id="medicalCheckUpDateColumn" prefWidth="92.0" text="Date" />
+          <TableColumn fx:id="medicalProfessionColumn" prefWidth="107.0" text="Profession" />
+            <TableColumn fx:id="medicalNotesColumn" prefWidth="275.0" text="Notes" />
+        </columns>
+      </TableView>
+      <TableView fx:id="resistanceExerciseList" layoutX="1318.0" layoutY="268.0" prefHeight="248.0" prefWidth="451.0">
+         <columns>
+            <TableColumn fx:id="resistanceDateColumn" prefWidth="132.0" text="Date" />
+            <TableColumn fx:id="resistanceTypeColumn" prefWidth="165.0" text="Type" />
+            <TableColumn fx:id="resistanceTimeColumn" prefWidth="167.0" text="Time (mins)" />
+         </columns>
+      </TableView>
+      <Button layoutX="1536.0" layoutY="222.0" mnemonicParsing="false" onAction="#updateResistanceEntry" text="Update Resistance Exercise" />
+      <Button layoutX="1443.0" layoutY="677.0" mnemonicParsing="false" onAction="#updateGymAttendance" text="Update Gym Attendance" />
+      <TableView fx:id="gymAttendanceList" layoutX="1436.0" layoutY="737.0" prefHeight="218.0" prefWidth="250.0">
+        <columns>
+          <TableColumn fx:id="attendanceDateColumn" prefWidth="127.0" text="Date" />
+          <TableColumn fx:id="attendanceSessionsColumn" prefWidth="122.0" text="Number Sessions" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>-->
