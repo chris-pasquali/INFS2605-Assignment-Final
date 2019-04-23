@@ -10,50 +10,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="614.0" prefWidth="684.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignmentmk4.MedicalCheckUpController">
-   <children>
-      <Button layoutX="508.0" layoutY="528.0" mnemonicParsing="false" onAction="#saveCheckUp" style="-fx-background-color: transparent;" />
-      <DatePicker fx:id="dateCheckUp" layoutX="85.0" layoutY="282.0" prefHeight="25.0" prefWidth="211.0" />
-      <TextField fx:id="professionCheckUp" layoutX="85.0" layoutY="212.0" prefHeight="25.0" prefWidth="200.0" />
-      <TextArea fx:id="notesCheckUp" layoutX="90.0" layoutY="383.0" prefHeight="200.0" prefWidth="200.0" />
-      <Text layoutX="90.0" layoutY="371.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Notes" wrappingWidth="95.2060546875">
-         <font>
-            <Font size="23.0" />
-         </font></Text>
-      <Text layoutX="90.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Professional">
-         <font>
-            <Font size="27.0" />
-         </font></Text>
-      <AnchorPane prefHeight="116.0" prefWidth="684.0" style="-fx-background-color: #2e8b57;">
-         <children>
-            <Button mnemonicParsing="false" onAction="#returnHome" style="-fx-background-color: transparent;" />
-            <ImageView fitHeight="66.0" fitWidth="80.0" layoutX="32.0" layoutY="25.0">
-               <image>
-                  <Image url="@../../AppData/Local/Temp/icons8_left_arrow_52px_3.png" />
-               </image>
-            </ImageView>
-            <Text fill="#fcf8f8" layoutX="207.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Medial Check Up" wrappingWidth="336.13671875">
-               <font>
-                  <Font name="Arial Black" size="27.0" />
-               </font>
-            </Text>
-         </children>
-      </AnchorPane>
-      <ImageView fitHeight="137.0" fitWidth="149.0" layoutX="426.0" layoutY="440.0">
-         <image>
-            <Image url="@../../AppData/Local/Temp/icons8_ok_60px.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="211.0" fitWidth="211.0" layoutX="395.0" layoutY="175.0">
-         <image>
-            <Image url="@../../AppData/Local/Temp/icons8_medical_doctor_128px.png" />
-         </image>
-      </ImageView>
-   </children>
-</AnchorPane>
-
-
-
 <!--<?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
@@ -75,3 +31,49 @@
       <Text layoutX="217.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Professional" />
    </children>
 </AnchorPane>-->
+
+<AnchorPane id="AnchorPane" prefHeight="541.0" prefWidth="592.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignmentmk4.MedicalCheckUpController">
+   <children>
+      <Button layoutX="416.0" layoutY="386.0" mnemonicParsing="false" onAction="#saveCheckUp" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="94.0" fitWidth="108.0">
+               <image>
+                  <Image url="file:/Users/chris_pasquali/Desktop/UNI/year%204/INFS2605/Assignmentmk4/Icons/Check.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <DatePicker fx:id="dateCheckUp" layoutX="85.0" layoutY="282.0" prefHeight="25.0" prefWidth="211.0" />
+      <TextField fx:id="professionCheckUp" layoutX="85.0" layoutY="212.0" prefHeight="25.0" prefWidth="211.0" />
+      <TextArea fx:id="notesCheckUp" layoutX="90.0" layoutY="383.0" prefHeight="107.0" prefWidth="200.0" />
+      <Text layoutX="90.0" layoutY="358.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Notes" wrappingWidth="95.2060546875">
+         <font>
+            <Font size="20.0" />
+         </font></Text>
+      <Text layoutX="90.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Professional">
+         <font>
+            <Font size="20.0" />
+         </font></Text>
+      <AnchorPane prefHeight="91.0" prefWidth="613.0" style="-fx-background-color: #2e8b57;">
+         <children>
+            <Button mnemonicParsing="false" onAction="#returnHome" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="57.0" fitWidth="65.0">
+                     <image>
+                        <Image url="file:/Users/chris_pasquali/Desktop/UNI/year%204/INFS2605/Assignmentmk4/Icons/Back.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Text fill="#fcf8f8" layoutX="173.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Medical Check Up" wrappingWidth="336.13671875">
+               <font>
+                  <Font name="Arial Black" size="27.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="139.0" fitWidth="132.0" layoutX="391.0" layoutY="185.0">
+         <image>
+            <Image url="file:/Users/chris_pasquali/Desktop/UNI/year%204/INFS2605/Assignmentmk4/Icons/Priest.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

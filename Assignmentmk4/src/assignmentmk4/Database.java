@@ -5,6 +5,8 @@
  */
 package assignmentmk4;
 
+
+import assignmentmk4.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -32,10 +34,11 @@ public class Database {
 //         3 = Dairy
 //         4 = Proteins
 //         5 = Carbohydrates
-        String createFoodQuery = "CREATE TABLE IF NOT EXISTS FoodConsumption1"
+        String createFoodQuery = "CREATE TABLE IF NOT EXISTS FoodConsumption2"
                 + "(MEAL_TIME TEXT, "
                 + "FOOD_CATEGORY TEXT, "
                 + "SERVINGS TEXT, "
+                + "FOOD_ITEM TEXT, "
                 + "DATE TEXT"
                 +");";
         st.execute(createFoodQuery);
@@ -74,7 +77,7 @@ public class Database {
                 +");";
         st.execute(createGymAttendance); 
         
-        String createUserGoals = "CREATE TABLE IF NOT EXISTS UserGoals1"
+        String createUserGoals = "CREATE TABLE IF NOT EXISTS UserGoals2"
                 + "(BMI TEXT,"
                 + "RATIO TEXT,"
                 + "STEPS TEXT,"
@@ -84,9 +87,9 @@ public class Database {
                 +");";
         st.execute(createUserGoals); 
         
-        String createResistanceQuery = "CREATE TABLE IF NOT EXISTS ResistanceExercise"
+        String createResistanceQuery = "CREATE TABLE IF NOT EXISTS ResistanceExercise1"
                 + "(TYPE TEXT,"
-                + "TIME TEXT,"
+                + "WEIGHT TEXT,"
                 + "DATE TEXT"
                 +");";
         st.execute(createResistanceQuery);
@@ -151,12 +154,12 @@ public class Database {
             
             
             //Inserting Food Here
-            String insertBreakfast = "INSERT OR IGNORE INTO FoodConsumption1 (MEAL_TIME, FOOD_CATEGORY, SERVINGS, DATE) "
-                    + "VALUES ('Breakfast', 'Fruit', '2','2019-04-19' )";
+            String insertBreakfast = "INSERT OR IGNORE INTO FoodConsumption2 (MEAL_TIME, FOOD_CATEGORY, SERVINGS, FOOD_ITEM, DATE) "
+                    + "VALUES ('Breakfast', 'Fruit', '2', 'APPLE' , '2019-04-19' )";
             st.execute(insertBreakfast);
             
-            String insertLunch = "INSERT OR IGNORE INTO FoodConsumption1 (MEAL_TIME, FOOD_CATEGORY, SERVINGS, DATE)"
-                    + "VALUES ('Lunch', 'Protein', '1', '2019-04-19' )";
+            String insertLunch = "INSERT OR IGNORE INTO FoodConsumption2 (MEAL_TIME, FOOD_CATEGORY, SERVINGS, FOOD_ITEM, DATE)"
+                    + "VALUES ('Lunch', 'Protein', '1', 'DOG', '2019-04-19' )";
             st.execute(insertLunch);
             
 //            String insertGoals = "INSERT OR IGNORE INTO UserGoals1 (BMI, RATIO, STEPS, FLIGHTS, HEARTRATE, SLEEP)"

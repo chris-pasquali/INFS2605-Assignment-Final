@@ -5,6 +5,8 @@
  */
 package assignmentmk4;
 
+
+import assignmentmk4.*;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 

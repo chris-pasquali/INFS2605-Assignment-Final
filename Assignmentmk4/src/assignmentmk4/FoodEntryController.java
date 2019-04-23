@@ -5,6 +5,7 @@
  */
 package assignmentmk4;
 
+import assignmentmk4.*;
 import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.net.URL;
@@ -30,6 +31,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
@@ -80,6 +82,8 @@ public class FoodEntryController implements Initializable {
     
     @FXML TextField foodItem;
     
+    @FXML Button save;
+    
     Connection conn;
     PreparedStatement pst = null;
     ResultSet rs = null;
@@ -120,7 +124,7 @@ public class FoodEntryController implements Initializable {
     
         try {
         Connection conn = DriverManager.getConnection("jdbc:sqlite:fitnessFanaticsDB.db");
-        String query = "INSERT INTO FoodConsumption1 (MEAL_TIME, FOOD_CATEGORY, SERVINGS, FOOD_ITEM, DATE) VALUES(?,?,?,?,?)";
+        String query = "INSERT INTO FoodConsumption2 (MEAL_TIME, FOOD_CATEGORY, SERVINGS, FOOD_ITEM, DATE) VALUES(?,?,?,?,?)";
         pst = conn.prepareStatement(query);
         
         pst = conn.prepareStatement(query);

@@ -5,6 +5,7 @@
  */
 package assignmentmk4;
 
+import assignmentmk4.*;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
@@ -80,26 +81,19 @@ public class MentalHealthController implements Initializable {
     
     Database d = new Database();
     
-    @FXML
     private TableView<mentalThoughts> mentalThoughtsList;
 
-    @FXML
     private TableColumn<mentalThoughts, String> mentalThoughtsDateColumn;
 
-    @FXML
     private TableColumn<mentalThoughts, String> mentalThoughtsColumn;
     
     
-    @FXML
     private TableView<mentalExercises> mentalExerciseList;
 
-    @FXML
     private TableColumn<mentalExercises, String> mentalExerciseDateColumn;
     
-    @FXML
     private TableColumn<mentalExercises, String> mentalExerciseColumn;
     
-    @FXML
     private TableColumn<mentalExercises, String> mentalExerciseMinutes;
     
 
@@ -188,7 +182,6 @@ public class MentalHealthController implements Initializable {
         dateExercise.setValue(null);
     }
     
-    @FXML
     public void initialize() {
     mentalThoughtsDateColumn.setCellValueFactory(
             cellData -> cellData.getValue().getMentalThoughtsDateProperty());

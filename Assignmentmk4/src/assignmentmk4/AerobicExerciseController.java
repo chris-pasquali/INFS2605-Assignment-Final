@@ -5,6 +5,8 @@
  */
 package assignmentmk4;
 
+
+import assignmentmk4.*;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
@@ -28,6 +30,8 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.Alert;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 /**
@@ -37,6 +41,7 @@ import javafx.stage.Stage;
  */
 public class AerobicExerciseController implements Initializable {
 
+
     @FXML
     private TextField type;
     @FXML
@@ -45,8 +50,6 @@ public class AerobicExerciseController implements Initializable {
     private TextField time;
     @FXML
     private DatePicker date;
-    @FXML
-    private Button saveAerobicExercise;
     @FXML
     private BarChart<?, ?> Running;
     @FXML
@@ -66,9 +69,21 @@ public class AerobicExerciseController implements Initializable {
     @FXML
     private NumberAxis swimmingy;
     
+
+    
     Connection conn;
     PreparedStatement pst = null;
     ResultSet rs = null;
+    @FXML
+    private ImageView image;
+    @FXML
+    private Button save;
+    @FXML
+    
+    private AnchorPane AerobicExercise;
+    @FXML
+    private Button returnHome;
+
     
     
     /**

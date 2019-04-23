@@ -5,6 +5,7 @@
  */
 package assignmentmk4;
 
+import assignmentmk4.*;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
@@ -131,7 +132,7 @@ public class ResistanceExerciseController implements Initializable {
     private void saveResistanceExercise(ActionEvent event) throws SQLException {
         try{
         Connection conn = DriverManager.getConnection("jdbc:sqlite:fitnessFanaticsDB.db");
-        String query = "INSERT INTO ResistanceExercise (TYPE, TIME, DATE) VALUES(?,?,?)";
+        String query = "INSERT INTO ResistanceExercise1 (TYPE, WEIGHT, DATE) VALUES(?,?,?)";
         pst = conn.prepareStatement(query);
         
         pst = conn.prepareStatement(query);

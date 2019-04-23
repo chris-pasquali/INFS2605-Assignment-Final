@@ -6,6 +6,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -13,105 +14,96 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="1020.0" prefWidth="1923.0" style="-fx-background-color: #2F4F4F;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignmentmk4.MentalHealthController">
-   <children>
-      <Label layoutX="832.0" layoutY="20.0" prefHeight="77.0" prefWidth="462.0" text="Mental Health" textFill="#0de86c">
-         <font>
-            <Font name="Berlin Sans FB Demi Bold" size="52.0" />
-         </font></Label>
-      <AnchorPane layoutX="367.0" layoutY="185.0" prefHeight="325.0" prefWidth="1564.0" style="-fx-background-color: #2e8b57;">
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="986.0" prefWidth="1007.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignmentmk4.MentalHealthController">
+   <content>
+      <AnchorPane id="AnchorPane" prefHeight="1031.0" prefWidth="997.0" style="-fx-background-color: #2F4F4F;">
          <children>
-            <BarChart fx:id="mindfulness" layoutX="188.0" layoutY="45.0" prefHeight="280.0" prefWidth="851.0" title="Mindfulness">
-              <xAxis>
-                <CategoryAxis fx:id="day" label="Day" side="BOTTOM" />
-              </xAxis>
-              <yAxis>
-                <NumberAxis fx:id="minutes" label="Minutes" side="LEFT" tickLabelFill="#fcf6f6">
-                     <tickLabelFont>
-                        <Font size="13.0" />
-                     </tickLabelFont>
-                  </NumberAxis>
-              </yAxis>
-            </BarChart>
+            <AnchorPane layoutX="78.0" layoutY="192.0" prefHeight="335.0" prefWidth="872.0" style="-fx-background-color: #2e8b57;">
+               <children>
+                  <BarChart fx:id="mindfulness" layoutX="93.0" layoutY="42.0" prefHeight="250.0" prefWidth="679.0" title="Mindfulness">
+                     <xAxis>
+                        <CategoryAxis fx:id="day" label="Day" side="BOTTOM" />
+                     </xAxis>
+                     <yAxis>
+                        <NumberAxis fx:id="minutes" label="Minutes" side="LEFT" tickLabelFill="#fcf6f6">
+                           <tickLabelFont>
+                              <Font size="13.0" />
+                           </tickLabelFont>
+                        </NumberAxis>
+                     </yAxis>
+                  </BarChart>
+                  <Label layoutX="23.0" layoutY="21.0" prefHeight="54.0" prefWidth="139.0" text="Diary" textFill="#f6fcf9">
+                     <font>
+                        <Font name="Arial Black" size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="532.0" layoutY="595.0" prefHeight="401.0" prefWidth="417.0" style="-fx-background-color: #2e8b57;">
+               <children>
+                  <DatePicker fx:id="dateExercise" layoutX="62.0" layoutY="86.0" prefHeight="34.0" prefWidth="272.0" promptText="Select Date" />
+                  <TextField fx:id="typeExercise" layoutX="62.0" layoutY="251.0" prefHeight="34.0" prefWidth="272.0" promptText="Enter Exercise" />
+                  <TextField fx:id="minutesExercise" layoutX="62.0" layoutY="167.0" prefHeight="34.0" prefWidth="272.0" promptText="Enter Minutes" />
+                  <Button fx:id="saveExercise" layoutX="62.0" layoutY="317.0" mnemonicParsing="false" onAction="#saveExercise" prefHeight="54.0" prefWidth="272.0">
+                     <graphic>
+                        <ImageView fitHeight="42.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="file:/Users/chris_pasquali/Desktop/UNI/year%204/INFS2605/Assignmentmk4/Icons/Check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="78.0" layoutY="595.0" prefHeight="401.0" prefWidth="442.0" style="-fx-background-color: #2e8b57;">
+               <children>
+                  <DatePicker fx:id="dateThoughts" layoutX="82.0" layoutY="35.0" prefHeight="25.0" prefWidth="294.0" promptText="Select Date" />
+                  <TextArea fx:id="thoughts" layoutX="78.0" layoutY="106.0" prefHeight="170.0" prefWidth="301.0" promptText="Enter your daily thoughts" />
+                  <Button fx:id="saveThoughts" layoutX="70.0" layoutY="310.0" mnemonicParsing="false" onAction="#saveThoughts" prefHeight="54.0" prefWidth="314.0" style="-fx-background-color: white;" text="Update" textFill="SEAGREEN">
+                     <font>
+                        <Font name="Arial Black" size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="78.0" layoutY="106.0" prefHeight="85.0" prefWidth="871.0" style="-fx-background-color: white;">
+               <children>
+                  <Button layoutX="36.0" layoutY="14.0" mnemonicParsing="false" onAction="#returnHome" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="60.0" fitWidth="86.0">
+                           <image>
+                              <Image url="file:/Users/chris_pasquali/Desktop/UNI/year%204/INFS2605/Assignmentmk4/Icons/back1.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label layoutX="289.0" layoutY="18.0" prefHeight="65.0" prefWidth="369.0" text="Mental Health" textFill="SEAGREEN">
+                     <font>
+                        <Font name="Berlin Sans FB Demi Bold" size="52.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="532.0" layoutY="531.0" prefHeight="64.0" prefWidth="417.0" style="-fx-background-color: white;">
+               <children>
+                  <Label layoutX="93.0" layoutY="10.0" prefHeight="43.0" prefWidth="231.0" text="Update Exercises" textAlignment="CENTER" textFill="SEAGREEN">
+                     <font>
+                        <Font name="Arial Black" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="78.0" layoutY="531.0" prefHeight="64.0" prefWidth="442.0" style="-fx-background-color: white;">
+               <children>
+                  <Label layoutX="90.0" layoutY="8.0" prefHeight="54.0" prefWidth="280.0" text="Update Daily Thoughts" textFill="SEAGREEN">
+                     <font>
+                        <Font name="Arial Black" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <Button layoutX="62.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: transparent;" />
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="1052.0" layoutY="604.0" prefHeight="386.0" prefWidth="882.0" style="-fx-background-color: #2e8b57;">
-         <children>
-            <DatePicker fx:id="dateExercise" layoutX="62.0" layoutY="52.0" prefHeight="34.0" prefWidth="272.0" promptText="Select Date" />
-            <TextField fx:id="typeExercise" layoutX="62.0" layoutY="247.0" prefHeight="34.0" prefWidth="272.0" promptText="Enter Exercise" />
-            <TextField fx:id="minutesExercise" layoutX="62.0" layoutY="146.0" prefHeight="34.0" prefWidth="272.0" promptText="Enter Minutes" />
-            <Button fx:id="saveExercise" layoutX="386.0" layoutY="105.0" mnemonicParsing="false" onAction="#saveExercise" prefHeight="47.0" prefWidth="186.0" style="-fx-background-color: transparent;" textFill="SEAGREEN">
-               <font>
-                  <Font name="Arial Black" size="24.0" />
-               </font>
-            </Button>
-            <ImageView fitHeight="122.0" fitWidth="136.0" layoutX="373.0" layoutY="102.0">
-               <image>
-                  <Image url="@../AppData/Local/Temp/icons8_checked_96px.png" />
-               </image>
-            </ImageView>
-            <Button layoutX="393.0" layoutY="321.0" mnemonicParsing="false" onAction="#saveExercise" prefHeight="46.0" prefWidth="117.0" text="Save" />
-         </children>
-      </AnchorPane>
-      <AnchorPane layoutX="361.0" layoutY="587.0" prefHeight="401.0" prefWidth="675.0" style="-fx-background-color: #2e8b57;">
-         <children>
-            <DatePicker fx:id="dateThoughts" layoutX="149.0" layoutY="29.0" prefHeight="34.0" prefWidth="301.0" promptText="Select Date" />
-            <TextArea fx:id="thoughts" layoutX="149.0" layoutY="80.0" prefHeight="170.0" prefWidth="301.0" promptText="Enter your daily thoughts" />
-            <Button fx:id="saveThoughts" layoutX="149.0" layoutY="271.0" mnemonicParsing="false" onAction="#saveThoughts" prefHeight="53.0" prefWidth="332.0" style="-fx-background-color: white;" text="Save" textFill="SEAGREEN">
-               <font>
-                  <Font name="Arial Black" size="24.0" />
-               </font>
-            </Button>
-         </children>
-      </AnchorPane>
-      <AnchorPane layoutX="367.0" layoutY="107.0" prefHeight="85.0" prefWidth="1325.0" style="-fx-background-color: white;">
-         <children>
-            <Label layoutX="25.0" layoutY="16.0" prefHeight="54.0" prefWidth="971.0" text="Diary" textFill="SEAGREEN">
-               <font>
-                  <Font name="Arial Black" size="36.0" />
-               </font>
-            </Label>
-            <ImageView fitHeight="71.0" fitWidth="71.0" layoutX="1165.0" layoutY="11.0">
-               <image>
-                  <Image url="@../AppData/Local/Temp/icons8_timetable_64px.png" />
-               </image>
-            </ImageView>
-            <Button layoutX="169.0" layoutY="33.0" mnemonicParsing="false" onAction="#returnHome" text="Return" />
-         </children>
-      </AnchorPane>
-      <AnchorPane layoutX="1052.0" layoutY="519.0" prefHeight="85.0" prefWidth="882.0" style="-fx-background-color: white;">
-         <children>
-            <Label layoutX="14.0" layoutY="16.0" prefHeight="54.0" prefWidth="498.0" text="Update Exercises" textAlignment="CENTER" textFill="SEAGREEN">
-               <font>
-                  <Font name="Arial Black" size="36.0" />
-               </font>
-            </Label>
-            <ImageView fitHeight="64.0" fitWidth="84.0" layoutX="470.0" layoutY="11.0">
-               <image>
-                  <Image url="@../AppData/Local/Temp/icons8_exercise_48px.png" />
-               </image>
-            </ImageView>
-         </children>
-      </AnchorPane>
-      <AnchorPane layoutX="361.0" layoutY="519.0" prefHeight="85.0" prefWidth="675.0" style="-fx-background-color: white;">
-         <children>
-            <Label layoutX="14.0" layoutY="16.0" prefHeight="54.0" prefWidth="618.0" text="Update Daily Thoughts" textFill="SEAGREEN">
-               <font>
-                  <Font name="Arial Black" size="32.0" />
-               </font>
-            </Label>
-            <ImageView fitHeight="77.0" fitWidth="84.0" layoutX="534.0" layoutY="5.0">
-               <image>
-                  <Image url="@../AppData/Local/Temp/icons8_speech_bubble_filled_100px.png" />
-               </image>
-            </ImageView>
-         </children>
-      </AnchorPane>
-      <Button layoutX="62.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: transparent;" />
-      <ImageView fitHeight="87.0" fitWidth="117.0" layoutX="367.0" layoutY="15.0">
-         <image>
-            <Image url="@../AppData/Local/Temp/icons8_left_arrow_52px_4.png" />
-         </image>
-      </ImageView>
-   </children>
-</AnchorPane>
+   </content>
+</ScrollPane>

@@ -5,6 +5,7 @@
  */
 package assignmentmk4;
 
+import assignmentmk4.*;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
@@ -75,8 +76,6 @@ public class MedicalCheckUpController implements Initializable {
          try{
         Connection conn = DriverManager.getConnection("jdbc:sqlite:fitnessFanaticsDB.db");
         String query = "INSERT INTO MedicalCheckUp (PROFESSION, NOTES, DATE) VALUES(?,?,?)";
-        pst = conn.prepareStatement(query);
-        
         pst = conn.prepareStatement(query);
         
         pst.setString(1, professionCheckUp.getText());

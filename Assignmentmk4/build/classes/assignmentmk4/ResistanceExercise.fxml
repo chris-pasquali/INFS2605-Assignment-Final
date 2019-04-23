@@ -12,95 +12,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="816.0" prefWidth="1160.0" style="-fx-background-color: #2e8b57;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignmentmk4.ResistanceExerciseController">
-   <children>
-      <Label layoutX="335.0" prefHeight="81.0" prefWidth="519.0" text="Resistance Exercise" textFill="#f8f7f7">
-         <font>
-            <Font name="Arial Black" size="44.0" />
-         </font></Label>
-      <AnchorPane layoutX="25.0" layoutY="82.0" prefHeight="235.0" prefWidth="519.0" style="-fx-background-color: white;">
-         <children>
-            <BarChart fx:id="LegPress" layoutX="6.0" layoutY="18.0" prefHeight="181.0" prefWidth="503.0" title="Leg Press">
-               <xAxis>
-                  <CategoryAxis fx:id="LegPressx" label="Month" side="BOTTOM" />
-               </xAxis>
-               <yAxis>
-                  <NumberAxis fx:id="LegPressy" label="Weight" side="LEFT" />
-               </yAxis>
-            </BarChart>
-         </children>
-      </AnchorPane>
-      <AnchorPane layoutX="25.0" layoutY="324.0" prefHeight="224.0" prefWidth="519.0" style="-fx-background-color: white;">
-         <children>
-            <BarChart fx:id="DeadLift" layoutX="10.0" layoutY="17.0" prefHeight="181.0" prefWidth="496.0" title="Dead Lift">
-               <xAxis>
-                  <CategoryAxis fx:id="DeadLiftx" label="Month" side="BOTTOM" />
-               </xAxis>
-               <yAxis>
-                  <NumberAxis fx:id="DeadLifty" label="Weight" side="LEFT" />
-               </yAxis>
-            </BarChart>
-         </children>
-      </AnchorPane>
-      <AnchorPane layoutX="25.0" layoutY="556.0" prefHeight="207.0" prefWidth="519.0" style="-fx-background-color: white;">
-         <children>
-            <BarChart fx:id="BenchPress" layoutY="29.0" prefHeight="206.0" prefWidth="512.0" title="Bench Press">
-              <xAxis>
-                <CategoryAxis fx:id="BenchPressx" label="Month" side="BOTTOM" />
-              </xAxis>
-              <yAxis>
-                <NumberAxis fx:id="BenchPressy" label="Weight" side="LEFT" />
-              </yAxis>
-            </BarChart>
-         </children>
-      </AnchorPane>
-      <AnchorPane layoutX="572.0" layoutY="82.0" prefHeight="709.0" prefWidth="564.0" style="-fx-background-color: #C0C0C0;">
-         <children>
-            <TextField fx:id="type" layoutX="164.0" layoutY="176.0" prefHeight="47.0" prefWidth="299.0" promptText="Type of Exercise" />
-            <TextField fx:id="time" layoutX="164.0" layoutY="330.0" prefHeight="47.0" prefWidth="299.0" promptText="Time (min)" />
-            <DatePicker fx:id="date" layoutX="164.0" layoutY="476.0" prefHeight="47.0" prefWidth="299.0" />
-            <Button layoutX="285.0" layoutY="567.0" mnemonicParsing="false" onAction="#saveResistanceExercise" style="-fx-background-color: transparent;" />
-            <Label layoutX="180.0" layoutY="119.0" style="-fx-background-color: sliver;" text="Exercise" textFill="SEAGREEN">
-               <font>
-                  <Font name="Arial Black" size="26.0" />
-               </font>
-            </Label>
-            <Label alignment="BASELINE_LEFT" layoutX="-195.0" layoutY="326.0" prefHeight="58.0" prefWidth="564.0" rotate="90.0" style="-fx-background-color: #2e8b57;" text="Update Your Resistance Exercise" textFill="#f5f0f0">
-               <font>
-                  <Font name="Berlin Sans FB" size="41.0" />
-               </font>
-            </Label>
-            <Label layoutX="176.0" layoutY="269.0" style="-fx-background-color: sliver;" text="Time" textFill="SEAGREEN">
-               <font>
-                  <Font name="Arial Black" size="26.0" />
-               </font>
-            </Label>
-            <Label layoutX="176.0" layoutY="416.0" style="-fx-background-color: sliver;" text="Date" textFill="SEAGREEN">
-               <font>
-                  <Font name="Arial Black" size="26.0" />
-               </font>
-            </Label>
-            <ImageView fitHeight="102.0" fitWidth="112.0" layoutX="259.0" layoutY="552.0">
-               <image>
-                  <Image url="@../../AppData/Local/Temp/icons8_ok_60px.png" />
-               </image>
-            </ImageView>
-         </children>
-      </AnchorPane>
-      <Button layoutX="25.0" layoutY="8.0" mnemonicParsing="false" onAction="#returnHome" prefHeight="27.0" prefWidth="77.0" style="-fx-background-color: transparent;">
-         <graphic>
-            <ImageView fitHeight="72.0" fitWidth="94.0">
-               <image>
-                  <Image url="@../../AppData/Local/Temp/icons8_left_arrow_52px_3.png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </Button>
-   </children>
-</AnchorPane>
-
-
-
 <!--<?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.chart.BarChart?>
@@ -150,3 +61,90 @@
       <Button layoutX="776.0" layoutY="338.0" mnemonicParsing="false" onAction="#saveResistanceExercise" text="Save" />
    </children>
 </AnchorPane>-->
+
+<AnchorPane id="AnchorPane" prefHeight="744.0" prefWidth="1059.0" style="-fx-background-color: #2e8b57;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignmentmk4.ResistanceExerciseController">
+   <children>
+      <Label layoutX="344.0" layoutY="14.0" prefHeight="81.0" prefWidth="519.0" text="Resistance Exercise" textFill="#f8f7f7">
+         <font>
+            <Font name="Arial Black" size="35.0" />
+         </font></Label>
+      <AnchorPane layoutX="88.0" layoutY="107.0" prefHeight="181.0" prefWidth="435.0" style="-fx-background-color: white;">
+         <children>
+            <BarChart fx:id="LegPress" layoutX="20.0" layoutY="29.0" prefHeight="134.0" prefWidth="395.0" title="Leg Press">
+               <xAxis>
+                  <CategoryAxis fx:id="LegPressx" label="Month" side="BOTTOM" />
+               </xAxis>
+               <yAxis>
+                  <NumberAxis fx:id="LegPressy" label="Weight" side="LEFT" />
+               </yAxis>
+            </BarChart>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="86.0" layoutY="311.0" prefHeight="169.0" prefWidth="435.0" style="-fx-background-color: white;">
+         <children>
+            <BarChart fx:id="DeadLift" layoutX="10.0" layoutY="17.0" prefHeight="127.0" prefWidth="395.0" title="Dead Lift">
+               <xAxis>
+                  <CategoryAxis fx:id="DeadLiftx" label="Month" side="BOTTOM" />
+               </xAxis>
+               <yAxis>
+                  <NumberAxis fx:id="DeadLifty" label="Weight" side="LEFT" />
+               </yAxis>
+            </BarChart>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="86.0" layoutY="496.0" prefHeight="195.0" prefWidth="435.0" style="-fx-background-color: white;">
+         <children>
+            <BarChart fx:id="BenchPress" layoutX="25.0" layoutY="22.0" prefHeight="151.0" prefWidth="377.0" title="Bench Press">
+              <xAxis>
+                <CategoryAxis fx:id="BenchPressx" label="Month" side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis fx:id="BenchPressy" label="Weight" side="LEFT" />
+              </yAxis>
+            </BarChart>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="532.0" layoutY="107.0" prefHeight="586.0" prefWidth="519.0" style="-fx-background-color: #C0C0C0;">
+         <children>
+            <TextField fx:id="type" layoutX="143.0" layoutY="91.0" prefHeight="47.0" prefWidth="299.0" promptText="Type of Exercise" />
+            <TextField fx:id="time" layoutX="139.0" layoutY="260.0" prefHeight="47.0" prefWidth="299.0" promptText="Kilos (kg)" />
+            <DatePicker fx:id="date" layoutX="139.0" layoutY="410.0" prefHeight="47.0" prefWidth="299.0" promptText="Select Date" />
+            <Label layoutX="150.0" layoutY="32.0" style="-fx-background-color: sliver;" text="Exercise" textFill="SEAGREEN">
+               <font>
+                  <Font name="Arial Black" size="26.0" />
+               </font>
+            </Label>
+            <Label alignment="BASELINE_LEFT" layoutX="-187.0" layoutY="255.0" prefHeight="58.0" prefWidth="503.0" rotate="90.0" style="-fx-background-color: #2e8b57;" text="    Update Your Resistance Exercise" textAlignment="CENTER" textFill="#f5f0f0">
+               <font>
+                  <Font name="Berlin Sans FB" size="28.0" />
+               </font>
+            </Label>
+            <Label layoutX="156.0" layoutY="199.0" style="-fx-background-color: sliver;" text="Weight" textFill="SEAGREEN">
+               <font>
+                  <Font name="Arial Black" size="26.0" />
+               </font>
+            </Label>
+            <Label layoutX="150.0" layoutY="334.0" style="-fx-background-color: sliver;" text="Date" textFill="SEAGREEN">
+               <font>
+                  <Font name="Arial Black" size="26.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="73.0" fitWidth="80.0" layoutX="235.0" layoutY="478.0">
+               <image>
+                  <Image url="file:/Users/chris_pasquali/Desktop/UNI/year%204/INFS2605/Assignmentmk4/Icons/Check.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="242.0" layoutY="483.0" mnemonicParsing="false" onAction="#saveResistanceExercise" opacity="0.0" prefHeight="64.0" prefWidth="67.0" text="Save" />
+         </children>
+      </AnchorPane>
+      <Button layoutX="88.0" layoutY="15.0" mnemonicParsing="false" onAction="#returnHome" prefHeight="27.0" prefWidth="77.0" style="-fx-background-color: transparent;">
+         <graphic>
+            <ImageView fitHeight="72.0" fitWidth="94.0">
+               <image>
+                  <Image url="file:/Users/chris_pasquali/Desktop/UNI/year%204/INFS2605/Assignmentmk4/Icons/Back.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

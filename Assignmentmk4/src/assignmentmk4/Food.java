@@ -7,6 +7,8 @@ package assignmentmk4;
 
 //import javafx.beans.property.IntegerProperty;
 //import javafx.beans.property.SimpleIntegerProperty;
+
+import assignmentmk4.*;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 

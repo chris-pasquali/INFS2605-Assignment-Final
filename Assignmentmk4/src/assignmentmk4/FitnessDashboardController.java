@@ -5,6 +5,8 @@
  */
 package assignmentmk4;
 
+
+import assignmentmk4.*;
 import assignmentmk4.Database;
 import assignmentmk4.Food;
 import java.io.IOException;
@@ -49,41 +51,41 @@ import javafx.stage.Stage;
 //public class FitnessDashboardController implements Initializable {
 public class FitnessDashboardController  {
     
-    @FXML
-    private Label stepsTxt;
-    
-    @FXML
-    private Label stairs;
-    
-    @FXML
-    private Label BMI;
-    
-    @FXML
-    private Label heartRate;
-    
-    @FXML
-    private Label fatRatio;
-    
-    @FXML
-    private Label sleep;
-    
-    @FXML
-    private Label stepGoals;
-    
-    @FXML
-    private Label stairsGoals;
-    
-    @FXML
-    private Label bmiGoals;
-    
-    @FXML
-    private Label heartRateGoal;
-    
-    @FXML
-    private Label fatRatioGoals;
-    
-    @FXML
-    private Label sleepGoals;
+//    @FXML
+//    private Label stepsTxt;
+//    
+//    @FXML
+//    private Label stairs;
+//    
+//    @FXML
+//    private Label BMI;
+//    
+//    @FXML
+//    private Label heartRate;
+//    
+//    @FXML
+//    private Label fatRatio;
+//    
+//    @FXML
+//    private Label sleep;
+//    
+//    @FXML
+//    private Label stepGoals;
+//    
+//    @FXML
+//    private Label stairsGoals;
+//    
+//    @FXML
+//    private Label bmiGoals;
+//    
+//    @FXML
+//    private Label heartRateGoal;
+//    
+//    @FXML
+//    private Label fatRatioGoals;
+//    
+//    @FXML
+//    private Label sleepGoals;
     
     @FXML
     private DatePicker datePicker;
@@ -165,7 +167,7 @@ public class FitnessDashboardController  {
     private TableColumn<mentalExercises, String> mentalExerciseColumn;
     
     @FXML
-    private TableColumn<mentalExercises, String> mentalExerciseMinutes;
+    private TableColumn<mentalExercises, String> mentalExerciseMinutesColumn;
     
     @FXML
     private TableView<MedicalCheckUp> medicalCheckUpList;
@@ -258,35 +260,35 @@ public class FitnessDashboardController  {
             while(rs.next()) {
                     System.out.println(rs.getString(3));
                     String displaySteps = rs.getString(3);
-                    stepsTxt.setText(displaySteps);
+//                  stepsTxt.setText(displaySteps);
                     
                     System.out.println(rs1.getString(3));
                     String displayStairs = rs1.getString(3);
-                    stairs.setText(displayStairs);
+//                  stairs.setText(displayStairs);
                     
                     System.out.println(rs2.getString(3));
                     String displayBMI = rs2.getString(3);
-                    BMI.setText(displayBMI);
+//                  BMI.setText(displayBMI);
                     
                     System.out.println(rs3.getString(3));
                     String displayHeartRate = rs3.getString(3);
-                    heartRate.setText(displayHeartRate);
+//                  heartRate.setText(displayHeartRate);
                     
                     System.out.println(rs4.getString(3));
                     String displayFatRatio = rs4.getString(3);
-                    fatRatio.setText(displayFatRatio);
+//                    fatRatio.setText(displayFatRatio);
                     
                     System.out.println(rs5.getString(3));
                     String displaySleep = rs5.getString(3);
-                    sleep.setText(displaySleep);
+//                    sleep.setText(displaySleep);
                     
                     System.out.println(rs6.getString(1));
-                    stepGoals.setText("Goal For Steps: " +rs6.getString(1));
-                    stairsGoals.setText("Goal For Flights of Stairs: " + rs7.getString(1));
-                    bmiGoals.setText("Goal for BMI " + rs8.getString(1));
-                    heartRateGoal.setText("Goal for Heart Rate: " + rs9.getString(1));
-                    sleepGoals.setText("Goal for Sleep: " + rs10.getString(1));
-                    fatRatioGoals.setText("Goal for Fat Ratio: " + rs11.getString(1));
+//                    stepGoals.setText("Goal For Steps: " +rs6.getString(1));
+//                    stairsGoals.setText("Goal For Flights of Stairs: " + rs7.getString(1));
+//                    bmiGoals.setText("Goal for BMI " + rs8.getString(1));
+//                    heartRateGoal.setText("Goal for Heart Rate: " + rs9.getString(1));
+//                    sleepGoals.setText("Goal for Sleep: " + rs10.getString(1));
+//                    fatRatioGoals.setText("Goal for Fat Ratio: " + rs11.getString(1));
                     
                     System.out.println(date);
             }
@@ -346,7 +348,7 @@ public class FitnessDashboardController  {
                 cellData -> cellData.getValue().getExerciseDateProperty());
         mentalExerciseColumn.setCellValueFactory(
                 cellData -> cellData.getValue().getExerciseTypeProperty());
-        mentalExerciseMinutes.setCellValueFactory(
+        mentalExerciseMinutesColumn.setCellValueFactory(
                 cellData -> cellData.getValue().getExerciseTimeProperty());
 
         mentalExerciseList.setItems(this.getMentalExercisesListData());
@@ -379,7 +381,7 @@ public class FitnessDashboardController  {
         private ObservableList<Food> getFoodListData() {
         List<Food> foodListToReturn = new ArrayList<>();
         try {
-            ResultSet rs = d.getResultSet("SELECT * FROM FoodConsumption1");
+            ResultSet rs = d.getResultSet("SELECT * FROM FoodConsumption2");
 //            ResultSet rs = d.getResultSet("SELECT * FROM FoodConsumption ORDER BY FOOD_CATEGORY DESC");
             while(rs.next()) {
                 foodListToReturn.add(
@@ -411,10 +413,10 @@ public class FitnessDashboardController  {
         private ObservableList<ResistanceExercise> getResistanceExerciseListData() {
         List<ResistanceExercise> ResistanceExerciseListToReturn = new ArrayList<>();
         try {
-            ResultSet rs = d.getResultSet("SELECT * FROM ResistanceExercise");
+            ResultSet rs = d.getResultSet("SELECT * FROM ResistanceExercise1");
             while(rs.next()) {
                 ResistanceExerciseListToReturn.add(
-                        new ResistanceExercise(rs.getString("TYPE"),rs.getString("TIME"), rs.getString("DATE")));
+                        new ResistanceExercise(rs.getString("TYPE"),rs.getString("WEIGHT"), rs.getString("DATE")));
             }
         } catch (SQLException ex) {
             ex.printStackTrace();
@@ -576,5 +578,9 @@ public class FitnessDashboardController  {
             window.setScene(FoodEntryScene);
             window.show();  
         }
+
+   void setMain(Assignmentmk4 aThis) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

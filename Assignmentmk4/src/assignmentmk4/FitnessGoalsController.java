@@ -5,6 +5,8 @@
  */
 package assignmentmk4;
 
+
+import assignmentmk4.*;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
@@ -71,7 +73,7 @@ public class FitnessGoalsController implements Initializable {
          try{
         Connection conn = DriverManager.getConnection("jdbc:sqlite:fitnessFanaticsDB.db");
 //        String query = "UPDATE UserGoals1 SET (BMI, RATIO, STEPS, FLIGHTS, HEARTRATE, SLEEP) VALUES(?,?,?,?,?,?)";
-        String query = "UPDATE UserGoals1 SET BMI=?, RATIO=?, STEPS=?, FLIGHTS=?, HEARTRATE=?, SLEEP=?";
+        String query = "UPDATE UserGoals2 SET BMI=?, RATIO=?, STEPS=?, FLIGHTS=?, HEARTRATE=?, SLEEP=?";
         pst = conn.prepareStatement(query);
  
         pst.setString(1, bmi.getText());
